@@ -57,7 +57,11 @@ const swSrc = paths.swSrc;
 
 // style files regexes
 const cssRegex = /\.(css|less)$/;
+<<<<<<< HEAD
 const cssModuleRegex = /\.module\.(css|less)$/;
+=======
+const cssModuleRegex = /\.module\.css$/;
+>>>>>>> master
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
@@ -110,6 +114,12 @@ module.exports = function (webpackEnv) {
         options: cssOptions,
       },
       {
+<<<<<<< HEAD
+=======
+        loader: require.resolve('less-loader'),
+      },
+      {
+>>>>>>> master
         // Options for PostCSS as we reference these options twice
         // Adds vendor prefixing based on your specified browser support in
         // package.json
@@ -375,10 +385,13 @@ module.exports = function (webpackEnv) {
                 name: 'static/media/[name].[hash:8].[ext]',
               },
             },
+<<<<<<< HEAD
             { //增加的部分
               test: [/\.tsx?/],
               loaders: ['babel-loader', 'ts-loader']
             },
+=======
+>>>>>>> master
             // "url" loader works like "file" loader except that it embeds assets
             // smaller than specified limit in bytes as data URLs to avoid requests.
             // A missing `test` is equivalent to a match.
@@ -472,7 +485,11 @@ module.exports = function (webpackEnv) {
               test: cssRegex,
               exclude: cssModuleRegex,
               use: getStyleLoaders({
+<<<<<<< HEAD
                 importLoaders: 2,
+=======
+                importLoaders: 1,
+>>>>>>> master
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
