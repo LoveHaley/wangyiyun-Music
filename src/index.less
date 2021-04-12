@@ -1,3 +1,159 @@
-#root {
-  background-color: red;
+@import '~antd/dist/antd.css';
+@import './style/common.less';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+ul, li {
+  list-style: none;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(33,33,36);
+  border-bottom: 2px solid rgb(183, 37, 37);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    .left-box {
+      width: 500px;
+      height: 100%;
+    }
+    .right-box{
+      width: 500px;
+      height: 100%;
+      ul{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        li{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 60px;
+          height: 60%;
+          color: #fff;
+          border-radius: 4px;
+          font-size: 18px;
+          cursor: pointer;
+          img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+.main-part {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 70px);
+  .side-nav {
+    width: 220px;
+    height: 100%;
+    background-color: #434343;
+    border-right: 1px solid #515151;
+    .sys-function {
+      width: 100%;
+      padding: 0;
+      li {
+        display: flex;
+        width:90%;
+        height: 40px;
+        border-radius: 10px;
+        margin: 5px 0;
+        padding: 0 0 0 15px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 40px;
+        cursor: pointer;
+        transition: .5s;
+        &:hover {
+          background-color: #515151;
+        }
+      }
+      .myMusice {
+        display: block;
+        width:90%;
+        height: 40px;
+        margin: 5px 0;
+        padding: 0 0 0 15px;
+        color: #cccccc;
+        margin: 10px 0;
+        line-height: 40px;
+      }
+      span {
+        line-height: 46px;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .show-box{
+    width: calc(100vw - 221px);
+    height: 100%;
+    background-color:  #434343;
+  }
+}
+.foot-musicPlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(33,33,36);
+  border-top: 1px solid #515151;
+  height: 60px;
+}
+
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+  float: left;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}
+
+// 修改卡片
+ .ant-card-hoverable {
+  &:hover {
+    box-shadow: 0 1px 2px 2px rgb(146, 145, 145);
+  }
+}
+
+.head_title {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #999;
+  line-height: 50px;
+  transition: .5s;
+  &:hover {
+    color: #fff;
+  }
+}
+
